@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('bienvenida');
+
+Route::resource('comments', CommentController::class);
 
 Route::get('/posts', function () {
     $posts = [1,2,3,4,5];

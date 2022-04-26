@@ -11,6 +11,7 @@
 <body>
     <h1>Hola desde index Post</h1>
     <ul>
+        <a href="{{route('bienvenida')}}">Welcome Page</a>
         @forelse ($posts as $post)
             <li>Post numero: {{ $post }}</li>
         @empty
